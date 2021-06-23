@@ -25,7 +25,7 @@
         "@babel/eslint-parser": "^7.14.7",
         "@babel/plugin-transform-modules-commonjs": "^7.14.0",
         "@babel/preset-env": "^7.9.5",
-        "@hckrnews/eslint-config": "^2.0.0",
+        "@hckrnews/eslint-config": "^2.0.1",
         "babel-jest": "^27.0.5",
         "codecov": "^3.6.5",
         "coveralls": "^3.0.13",
