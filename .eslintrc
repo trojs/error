@@ -15,7 +15,7 @@
     ],
     "parserOptions": {
         "sourceType": "module",
-        "parser": "@babel/eslint-parserbabel-eslint",
+        "parser": "@babel/eslint-parser",
         "babelOptions": {
             "configFile": "babel.config.js",
         }
