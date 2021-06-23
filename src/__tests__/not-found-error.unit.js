@@ -34,7 +34,7 @@ describe('Not Found Error test', () => {
         expect(error instanceof Error).toEqual(true);
         expect(error.name).toEqual('NotFoundError');
         expect(error.message).toEqual('Invalid error');
-        expect(error.value.errors[0][0]).toEqual('type');
+        expect(error.value.errors[0][0]).toEqual('type?');
         expect(error.value.values.message).toEqual('Invalid error');
         expect(error.value.values.name).toEqual('NotFoundError');
         expect(error.value.values.status).toEqual(404);
