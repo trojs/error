@@ -1,8 +1,8 @@
 export default {
     name: String,
     message: String,
-    value: 'mixed',
+    'value?': 'mixed',
     status: Number,
-    type: Function,
-    date: Date
-}
+    'type?': Function,
+    date: Date,
+};;
