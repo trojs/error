@@ -1,5 +1,5 @@
 /** global: describe */
-import ServerError from '../server-error';
+import { ServerError } from '../index';
 
 describe('Server Error test', () => {
     it('It should create a server error', () => {

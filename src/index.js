@@ -1,10 +1,13 @@
-import AppError from './app-error';
+import makeAppError from './app-error';
 import NotFoundError from './not-found-error';
 import NotImplementedError from './not-implemented-error';
 import ServerError from './server-error';
 import ValidationError from './validation-error';
 
+const AppError = makeAppError();
+
 export default Object.freeze({
+    makeAppError,
     AppError,
     NotFoundError,
     NotImplementedError,
@@ -13,6 +16,7 @@ export default Object.freeze({
 });
 
 export {
+    makeAppError,
     AppError,
     NotFoundError,
     NotImplementedError,

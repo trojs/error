@@ -1,7 +1,5 @@
 /** global: describe */
-import makeAppError from '../app-error';
-
-const AppError = makeAppError();
+import { AppError } from '../index';
 
 describe('App Error test', () => {
     it('It should create a app error', () => {

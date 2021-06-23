@@ -1,5 +1,5 @@
 /** global: describe */
-import ValidationError from '../validation-error';
+import { ValidationError } from '../index';
 
 describe('Validation Error test', () => {
     it('It should create a validation error', () => {
