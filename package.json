@@ -1,0 +1,57 @@
+{
+    "name": "@hckrnews/error",
+    "description": "Extended Errors",
+    "version": "0.1.0",
+    "author": {
+        "name": "Pieter Wigboldus",
+        "url": "https://hckr.news/"
+    },
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint src/*.js --config .eslintrc",
+        "lint:fix": "eslint src/*.js --config .eslintrc --fix",
+        "test": "jest",
+        "test:watch": "jest src --watch",
+        "coveralls": "jest && codecov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+        "cpd": "node_modules/jscpd/bin/jscpd src"
+    },
+    "type": "module",
+    "files": [
+        "src/error.js"
+    ],
+    "main": "src/error.js",
+    "devDependencies": {
+        "@babel/core": "^7.9.0",
+        "@babel/eslint-parser": "^7.14.7",
+        "@babel/plugin-transform-modules-commonjs": "^7.14.0",
+        "@babel/preset-env": "^7.9.5",
+        "@hckrnews/eslint-config": "^2.0.0",
+        "babel-jest": "^27.0.5",
+        "codecov": "^3.6.5",
+        "coveralls": "^3.0.13",
+        "eslint": "^7.24.0",
+        "eslint-config-airbnb": "^18.2.0",
+        "eslint-config-prettier": "^8.2.0",
+        "eslint-plugin-html": "^6.1.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.3.1",
+        "jest": "^27.0.5",
+        "jscpd": "^3.2.1",
+        "prettier": "^2.2.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hckrnews/objects"
+    },
+    "engines": {
+        "node": ">= 14"
+    },
+    "keywords": [
+        "objects",
+        "flat"
+    ],
+    "dependencies": {
+        "@hckrnews/validator": "^5.0.1"
+    }
+}
