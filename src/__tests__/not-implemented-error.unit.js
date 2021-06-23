@@ -1,5 +1,5 @@
 /** global: describe */
-import NotImplementedError from '../not-implemented-error';
+import { NotImplementedError } from '../index';
 
 describe('Not Implemented Error test', () => {
     it('It should create a not implemented error', () => {
