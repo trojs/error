@@ -10,9 +10,21 @@
         "it": false,
         "expect": false
     },
+    "plugins": [
+        "import"
+    ],
     "extends": [
         "@hckrnews/eslint-config"
     ],
+    "rules": {
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "always"
+            }
+        ],
+    },
     "parser": "@babel/eslint-parser",
     "parserOptions": {
         "sourceType": "module",

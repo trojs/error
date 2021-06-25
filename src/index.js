@@ -1,8 +1,8 @@
-import makeAppError from './app-error';
-import NotFoundError from './not-found-error';
-import NotImplementedError from './not-implemented-error';
-import ServerError from './server-error';
-import ValidationError from './validation-error';
+import makeAppError from './app-error.js';
+import NotFoundError from './not-found-error.js';
+import NotImplementedError from './not-implemented-error.js';
+import ServerError from './server-error.js';
+import ValidationError from './validation-error.js';
 
 const AppError = makeAppError();
 
