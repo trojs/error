@@ -1,7 +1,5 @@
 /** global: describe */
-import makeAppError from '../app-error';
-
-const AppError = makeAppError();
+import { AppError } from '../index';
 
 describe('App Error test', () => {
     it('It should create a app error', () => {
@@ -33,7 +31,7 @@ describe('App Error test', () => {
         expect(error instanceof Error).toEqual(true);
         expect(error.name).toEqual('AppError');
         expect(error.message).toEqual('Invalid error');
-        expect(error.value.errors[0][0]).toEqual('type');
+        expect(error.value.errors[0][0]).toEqual('type?');
         expect(error.value.values.message).toEqual('Invalid error');
         expect(error.value.values.name).toEqual('AppError');
         expect(error.value.values.status).toEqual(500);

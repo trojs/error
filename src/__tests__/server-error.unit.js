@@ -1,5 +1,5 @@
 /** global: describe */
-import ServerError from '../server-error';
+import { ServerError } from '../index';
 
 describe('Server Error test', () => {
     it('It should create a server error', () => {
@@ -31,7 +31,7 @@ describe('Server Error test', () => {
         expect(error instanceof Error).toEqual(true);
         expect(error.name).toEqual('ServerError');
         expect(error.message).toEqual('Invalid error');
-        expect(error.value.errors[0][0]).toEqual('type');
+        expect(error.value.errors[0][0]).toEqual('type?');
         expect(error.value.values.message).toEqual('Invalid error');
         expect(error.value.values.name).toEqual('ServerError');
         expect(error.value.values.status).toEqual(500);

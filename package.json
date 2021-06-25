@@ -1,7 +1,7 @@
 {
     "name": "@hckrnews/error",
     "description": "Extended Errors",
-    "version": "0.1.0",
+    "version": "0.1.4",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://hckr.news/"
@@ -17,9 +17,15 @@
     },
     "type": "module",
     "files": [
-        "src/error.js"
+        "src/index.js",
+        "src/app-error.js",
+        "src/not-found-error.js",
+        "src/not-implemented-error.js",
+        "src/server-error.js",
+        "src/validation-error.js",
+        "src/schemas/error.js"
     ],
-    "main": "src/error.js",
+    "main": "src/index.js",
     "devDependencies": {
         "@babel/core": "^7.9.0",
         "@babel/eslint-parser": "^7.14.7",

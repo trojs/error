@@ -1,5 +1,5 @@
 /** global: describe */
-import ValidationError from '../validation-error';
+import { ValidationError } from '../index';
 
 describe('Validation Error test', () => {
     it('It should create a validation error', () => {
@@ -34,7 +34,7 @@ describe('Validation Error test', () => {
         expect(error instanceof Error).toEqual(true);
         expect(error.name).toEqual('ValidationError');
         expect(error.message).toEqual('Invalid error');
-        expect(error.value.errors[0][0]).toEqual('type');
+        expect(error.value.errors[0][0]).toEqual('type?');
         expect(error.value.values.message).toEqual('Invalid error');
         expect(error.value.values.name).toEqual('ValidationError');
         expect(error.value.values.status).toEqual(400);

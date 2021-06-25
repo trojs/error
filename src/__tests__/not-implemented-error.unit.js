@@ -1,5 +1,5 @@
 /** global: describe */
-import NotImplementedError from '../not-implemented-error';
+import { NotImplementedError } from '../index';
 
 describe('Not Implemented Error test', () => {
     it('It should create a not implemented error', () => {
@@ -34,7 +34,7 @@ describe('Not Implemented Error test', () => {
         expect(error instanceof Error).toEqual(true);
         expect(error.name).toEqual('NotImplementedError');
         expect(error.message).toEqual('Invalid error');
-        expect(error.value.errors[0][0]).toEqual('type');
+        expect(error.value.errors[0][0]).toEqual('type?');
         expect(error.value.values.message).toEqual('Invalid error');
         expect(error.value.values.name).toEqual('NotImplementedError');
         expect(error.value.values.status).toEqual(405);
