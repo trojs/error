@@ -1,5 +1,5 @@
 /** global: describe */
-import { NotFoundError } from '../index';
+import { NotFoundError } from '../index.js';
 
 describe('Not Found Error test', () => {
     it('It should create a not found error', () => {
