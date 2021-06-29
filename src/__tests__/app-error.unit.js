@@ -1,5 +1,5 @@
 /** global: describe */
-import { AppError } from '../index';
+import { AppError } from '../index.js';
 
 describe('App Error test', () => {
     it('It should create a app error', () => {
@@ -7,6 +7,7 @@ describe('App Error test', () => {
             value: 'test',
             type: String,
             message: 'Example text',
+            me: AppError,
         });
 
         expect(error instanceof AppError).toEqual(true);
@@ -18,6 +19,7 @@ describe('App Error test', () => {
         expect(error.type).toEqual(String);
         expect(error.date.constructor).toEqual(Date);
         expect(error.stack.includes('AppError: Example text')).toEqual(true);
+        expect(error.me).toEqual(AppError);
     });
 
     it('It should handle invalid error values', () => {
@@ -25,6 +27,7 @@ describe('App Error test', () => {
             value: 'test',
             type: 'string',
             message: 'Example text',
+            me: AppError,
         });
 
         expect(error instanceof AppError).toEqual(true);
@@ -41,5 +44,6 @@ describe('App Error test', () => {
         expect(error.type).toEqual(Error);
         expect(error.date.constructor).toEqual(Date);
         expect(error.stack.includes('AppError: Invalid error')).toEqual(true);
+        expect(error.me).toEqual(AppError);
     });
 });

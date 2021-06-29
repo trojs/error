@@ -5,14 +5,14 @@ const validator = new Validator(errorSchema);
 
 export default (error = Error) =>
     class AppError extends error {
-        constructor({ value = null, type = null, message }) {
+        constructor({ value = null, type = null, message, me = null }) {
             super(message);
 
             if (Error.captureStackTrace) {
                 Error.captureStackTrace(this, AppError);
             }
 
-            this.setValues({ value, type });
+            this.setValues({ value, type, me });
         }
 
         get name() {
@@ -27,9 +27,10 @@ export default (error = Error) =>
             return this.hasErrors ? 500 : this.errorStatus;
         }
 
-        setValues({ value, type }) {
+        setValues({ value, type, me }) {
             this.value = value;
             this.type = type;
+            this.me = me;
             this.date = new Date();
 
             if (!this.validate()) {
@@ -51,6 +52,7 @@ export default (error = Error) =>
                 status: this.errorStatus,
                 type: this.type,
                 date: this.date,
+                me: this.me,
             };
         }
 

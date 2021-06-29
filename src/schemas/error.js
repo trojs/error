@@ -5,4 +5,4 @@ export default {
     status: Number,
     'type?': Function,
     date: Date,
-};;
+};
