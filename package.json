@@ -1,7 +1,7 @@
 {
     "name": "@hckrnews/error",
     "description": "Extended Errors",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://hckr.news/"
@@ -48,14 +48,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/hckrnews/objects"
+        "url": "https://github.com/hckrnews/error"
     },
     "engines": {
         "node": ">= 14"
     },
     "keywords": [
-        "objects",
-        "flat"
+        "error",
+        "exception",
+        "catch"
     ],
     "dependencies": {
         "@hckrnews/validator": "^5.0.1"
