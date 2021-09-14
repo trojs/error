@@ -11,6 +11,7 @@ Types:
  * NotFoundError
  * NotImplementedError
  * ServerError
+ * TimeoutError
  * ValidationError
 
 You can send:
