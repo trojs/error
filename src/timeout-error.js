@@ -8,7 +8,7 @@ class TimeoutError extends AppError {
     }
 
     get errorStatus() {
-        return 418;
+        return 408;
     }
 }
 
