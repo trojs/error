@@ -1,4 +1,4 @@
-/** global: describe */
+import { expect, describe, it } from '@jest/globals';
 import { AppError } from '../index.js';
 
 describe('App Error test', () => {

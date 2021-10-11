@@ -1,4 +1,4 @@
-/** global: describe */
+import { expect, describe, it } from '@jest/globals';
 import { TimeoutError } from '../index.js';
 
 describe('Timeout Error test', () => {
