@@ -1,4 +1,4 @@
-/** global: describe */
+import { expect, describe, it } from '@jest/globals';
 import { ValidationError } from '../index.js';
 
 describe('Validation Error test', () => {
