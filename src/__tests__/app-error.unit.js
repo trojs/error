@@ -2,6 +2,63 @@ import { expect, describe, it } from '@jest/globals';
 import { AppError } from '../index.js';
 
 describe('App Error test', () => {
+    it('It should create a app error with minimum fields', () => {
+        const error = new AppError({
+            message: 'Example text',
+        });
+
+        expect(error instanceof AppError).toEqual(true);
+        expect(error instanceof Error).toEqual(true);
+        expect(error.name).toEqual('AppError');
+        expect(error.message).toEqual('Example text');
+        expect(error.value).toEqual(null);
+        expect(error.status).toEqual(500);
+        expect(error.type).toEqual(null);
+        expect(error.date.constructor).toEqual(Date);
+        expect(error.stack.includes('AppError: Example text')).toEqual(true);
+        expect(error.me).toEqual(null);
+    });
+
+    it('It should create a app error with null on optional fields', () => {
+        const error = new AppError({
+            value: null,
+            type: null,
+            message: 'Example text',
+            me: null,
+        });
+
+        expect(error instanceof AppError).toEqual(true);
+        expect(error instanceof Error).toEqual(true);
+        expect(error.name).toEqual('AppError');
+        expect(error.message).toEqual('Example text');
+        expect(error.value).toEqual(null);
+        expect(error.status).toEqual(500);
+        expect(error.type).toEqual(null);
+        expect(error.date.constructor).toEqual(Date);
+        expect(error.stack.includes('AppError: Example text')).toEqual(true);
+        expect(error.me).toEqual(null);
+    });
+
+    it('It should create a app error with undefined on optional fields', () => {
+        const error = new AppError({
+            value: undefined,
+            type: undefined,
+            message: 'Example text',
+            me: undefined,
+        });
+
+        expect(error instanceof AppError).toEqual(true);
+        expect(error instanceof Error).toEqual(true);
+        expect(error.name).toEqual('AppError');
+        expect(error.message).toEqual('Example text');
+        expect(error.value).toEqual(null);
+        expect(error.status).toEqual(500);
+        expect(error.type).toEqual(null);
+        expect(error.date.constructor).toEqual(Date);
+        expect(error.stack.includes('AppError: Example text')).toEqual(true);
+        expect(error.me).toEqual(null);
+    });
+
     it('It should create a app error', () => {
         const error = new AppError({
             value: 'test',
