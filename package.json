@@ -1,7 +1,7 @@
 {
     "name": "@hckrnews/error",
     "description": "Extended Errors",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://hckr.news/"
@@ -20,6 +20,7 @@
     "files": [
         "src/index.js",
         "src/app-error.js",
+        "src/authentication-error.js",
         "src/not-found-error.js",
         "src/not-implemented-error.js",
         "src/server-error.js",
