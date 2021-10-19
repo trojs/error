@@ -8,6 +8,7 @@ The object extends an Error object.
 Types:
 
  * AppError
+ * AuthenticationError
  * NotFoundError
  * NotImplementedError
  * ServerError
