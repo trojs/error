@@ -21,6 +21,7 @@
         "src/index.js",
         "src/app-error.js",
         "src/authentication-error.js",
+        "src/no-content-error.js",
         "src/not-found-error.js",
         "src/not-implemented-error.js",
         "src/server-error.js",
