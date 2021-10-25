@@ -9,6 +9,7 @@ Types:
 
  * AppError
  * AuthenticationError
+ * NoContent
  * NotFoundError
  * NotImplementedError
  * ServerError

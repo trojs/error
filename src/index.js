@@ -1,5 +1,6 @@
 import makeAppError from './app-error.js';
 import AuthenticationError from './authentication-error.js';
+import NoContentError from './no-content-error.js';
 import NotFoundError from './not-found-error.js';
 import NotImplementedError from './not-implemented-error.js';
 import ServerError from './server-error.js';
@@ -12,6 +13,7 @@ export default Object.freeze({
     makeAppError,
     AppError,
     AuthenticationError,
+    NoContentError,
     NotFoundError,
     NotImplementedError,
     ServerError,
@@ -23,6 +25,7 @@ export {
     makeAppError,
     AppError,
     AuthenticationError,
+    NoContentError,
     NotFoundError,
     NotImplementedError,
     ServerError,
