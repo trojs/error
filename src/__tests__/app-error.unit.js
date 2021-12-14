@@ -103,4 +103,93 @@ describe('App Error test', () => {
         expect(error.stack.includes('AppError: Invalid error')).toEqual(true);
         expect(error.me).toEqual(AppError);
     });
+
+    it('It should catch the error from the stack', () => {
+        const DoOne = () => {
+            try {
+              DoTwo();
+            } catch (error) {
+              throw new AppError({
+                value: 'test',
+                type: String,
+                message: 'Example from one',
+                me: AppError,
+            });
+            }
+          };
+
+          const DoTwo = () => {
+            try {
+              throw new AppError({
+                value: 'test',
+                type: String,
+                message: 'Example from two',
+                me: AppError,
+            });
+            } catch (error) {
+              throw error;
+            }
+          };
+
+          expect(() => {
+            DoOne();
+        }).toThrowError('Example from one');
+
+        try {
+            DoOne();
+        } catch(error) {
+            expect(error instanceof AppError).toEqual(true);
+            expect(error instanceof Error).toEqual(true);
+            expect(error.name).toEqual('AppError');
+            expect(error.message).toEqual('Example from one');
+            expect(error.value).toEqual('test');
+            expect(error.status).toEqual(500);
+            expect(error.type).toEqual(String);
+            expect(error.date.constructor).toEqual(Date);
+            expect(error.stack.includes('AppError: Example from one')).toEqual(true);
+            expect(error.me).toEqual(AppError);
+        }
+    });
+
+    it('It should catch the error from the sub stack', () => {
+        const DoOne = () => {
+            try {
+              DoTwo();
+            } catch (error) {
+              throw error
+            }
+          };
+
+          const DoTwo = () => {
+            try {
+              throw new AppError({
+                value: 'test',
+                type: String,
+                message: 'Example from two',
+                me: AppError,
+            });
+            } catch (error) {
+              throw error;
+            }
+          };
+
+          expect(() => {
+            DoOne();
+        }).toThrowError('Example from two');
+
+        try {
+            DoOne();
+        } catch(error) {
+            expect(error instanceof AppError).toEqual(true);
+            expect(error instanceof Error).toEqual(true);
+            expect(error.name).toEqual('AppError');
+            expect(error.message).toEqual('Example from two');
+            expect(error.value).toEqual('test');
+            expect(error.status).toEqual(500);
+            expect(error.type).toEqual(String);
+            expect(error.date.constructor).toEqual(Date);
+            expect(error.stack.includes('AppError: Example from two')).toEqual(true);
+            expect(error.me).toEqual(AppError);
+        }
+    });
 });
