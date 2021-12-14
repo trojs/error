@@ -3,9 +3,10 @@ import { NoContentError } from '../index.js';
 
 describe('No Content Error test', () => {
     it('It should create a no content error', () => {
+        const fetch = async () => ({})
         const error = new NoContentError({
             value: 'test',
-            type: String,
+            type: fetch,
             message: 'Example text',
         });
 
@@ -16,7 +17,7 @@ describe('No Content Error test', () => {
         expect(error.message).toEqual('Example text');
         expect(error.value).toEqual('test');
         expect(error.status).toEqual(204);
-        expect(error.type).toEqual(String);
+        expect(error.type).toEqual(fetch);
         expect(error.date.constructor).toEqual(Date);
         expect(error.stack.includes('NoContentError: Example text')).toEqual(
             true
