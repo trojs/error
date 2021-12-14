@@ -3,6 +3,6 @@ export default {
     message: String,
     'value?': 'mixed',
     status: Number,
-    'type?': "function|async",
+    'type?': 'function|async',
     date: Date,
 };

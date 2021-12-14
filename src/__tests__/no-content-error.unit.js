@@ -3,7 +3,7 @@ import { NoContentError } from '../index.js';
 
 describe('No Content Error test', () => {
     it('It should create a no content error', () => {
-        const fetch = async () => ({})
+        const fetch = async () => ({});
         const error = new NoContentError({
             value: 'test',
             type: fetch,
