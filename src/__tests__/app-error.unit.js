@@ -150,35 +150,35 @@ describe('App Error test', () => {
     });
 
     it('It should catch the error from the sub stack', () => {
-        const DoTwo = () => {
+        const DoFour = () => {
             throw new AppError({
                 value: 'test',
                 type: String,
-                message: 'Example from two',
+                message: 'Example from four',
                 me: AppError,
             });
         };
 
-        const DoOne = () => {
-            DoTwo();
+        const DoThree = () => {
+            DoFour();
         };
 
         expect(() => {
-            DoOne();
-        }).toThrowError('Example from two');
+            DoThree();
+        }).toThrowError('Example from four');
 
         try {
-            DoOne();
+            DoThree();
         } catch (error) {
             expect(error instanceof AppError).toEqual(true);
             expect(error instanceof Error).toEqual(true);
             expect(error.name).toEqual('AppError');
-            expect(error.message).toEqual('Example from two');
+            expect(error.message).toEqual('Example from four');
             expect(error.value).toEqual('test');
             expect(error.status).toEqual(500);
             expect(error.type).toEqual(String);
             expect(error.date.constructor).toEqual(Date);
-            expect(error.stack.includes('AppError: Example from two')).toEqual(
+            expect(error.stack.includes('AppError: Example from four')).toEqual(
                 true
             );
             expect(error.me).toEqual(AppError);
