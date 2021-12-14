@@ -1,7 +1,7 @@
 {
     "name": "@hckrnews/error",
     "description": "Extended Errors",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://hckr.news/"
@@ -40,16 +40,16 @@
         "babel-jest": "^27.0.5",
         "codecov": "^3.6.5",
         "coveralls": "^3.0.13",
-        "eslint": "^7.24.0",
-        "eslint-config-airbnb": "^18.2.0",
+        "eslint": "^8.4.1",
+        "eslint-config-airbnb": "^19.0.2",
         "eslint-config-prettier": "^8.2.0",
         "eslint-plugin-html": "^6.1.2",
         "eslint-plugin-import": "^2.23.4",
         "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-prettier": "^4.0.0",
         "jest": "^27.0.5",
         "jscpd": "^3.2.1",
-        "prettier": "^2.2.1"
+        "prettier": "^2.5.1"
     },
     "repository": {
         "type": "git",
