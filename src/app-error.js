@@ -4,8 +4,28 @@ import errorSchema from './schemas/error.js';
 
 const validator = new Validator(errorSchema);
 
+/**
+ * @typedef {Object} ErrorValues
+ * @property {string} name
+ * @property {string} message
+ * @property {any} value
+ * @property {number} status
+ * @property {object} type
+ * @property {Date} date
+ * @property {object} me
+ */
+
 export default (error = Error) =>
     class AppError extends error {
+        /**
+         * Set the error values
+         *
+         * @param {object} error
+         * @param {any} error.value
+         * @param {object} error.type
+         * @param {string} error.nessage
+         * @param {object} error.me
+         */
         constructor({ value = null, type = null, message, me = null }) {
             super(message);
 
@@ -16,18 +36,41 @@ export default (error = Error) =>
             this.setValues({ value, type, me });
         }
 
+        /**
+         * Get the error name
+         *
+         * @return {string}
+         */
         get name() {
             return 'AppError';
         }
 
+        /**
+         * Get the error status
+         *
+         * @return {number}
+         */
         get errorStatus() {
             return 500;
         }
 
+        /**
+         * Get the error status, or 500 if the error is invalid
+         *
+         * @return {number}
+         */
         get status() {
             return this.hasErrors ? 500 : this.errorStatus;
         }
 
+        /**
+         * Set the error values
+         *
+         * @param {object} data
+         * @param {any} data.value
+         * @param {object} data.type
+         * @param {object} data.me
+         */
         setValues({ value, type, me }) {
             this.value = value;
             this.type = type;
@@ -41,10 +84,20 @@ export default (error = Error) =>
             }
         }
 
+        /**
+         * Check if the error has errors
+         *
+         * @return {boolean}
+         */
         get hasErrors() {
             return validator.errors.length > 0;
         }
 
+        /**
+         * Get the error values
+         *
+         * @return {ErrorValues}
+         */
         get values() {
             return {
                 name: this.name,
@@ -57,6 +110,11 @@ export default (error = Error) =>
             };
         }
 
+        /**
+         * Validate the error values
+         *
+         * @return {boolean}
+         */
         validate() {
             return validator.validate(this.values);
         }
