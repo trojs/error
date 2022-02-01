@@ -10,7 +10,7 @@ const validator = new Validator(errorSchema);
  * @property {string} message
  * @property {any} value
  * @property {number} status
- * @property {object} type
+ * @property {Function|AsyncFunction} type
  * @property {Date} date
  * @property {object} me
  */
