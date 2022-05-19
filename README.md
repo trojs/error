@@ -15,6 +15,7 @@ Types:
  * ServerError
  * TimeoutError
  * ValidationError
+ * RateLimitError
 
 You can send:
 
