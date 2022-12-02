@@ -41,7 +41,7 @@
         "dist/error.umd.cjs",
         "dist/error.umd.cjs.map"
     ],
-    "source": "src/error.js",
+    "source": "src/index.js",
     "module": "dist/error.module.mjs",
     "unpkg": "dist/error.umd.cjs",
     "umd:main": "dist/error.umd.cjs",
