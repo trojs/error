@@ -1,7 +1,7 @@
 {
     "name": "@hckrnews/error",
     "description": "Extended Errors",
-    "version": "0.3.10",
+    "version": "1.0.0",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://hckr.news/"
@@ -15,9 +15,11 @@
         "test:watch": "jest src --watch",
         "coveralls": "jest && codecov && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
-        "vulnerabilities": "npm audit --only=prod"
+        "vulnerabilities": "npm audit --only=prod",
+        "build": "microbundle --target node"
     },
     "type": "module",
+    "main": "dist/error.js",
     "files": [
         "src/index.js",
         "src/app-error.js",
@@ -29,9 +31,28 @@
         "src/timeout-error.js",
         "src/validation-error.js",
         "src/rate-limit-error.js",
-        "src/schemas/error.js"
+        "src/schemas/error.js",
+        "dist/error.cjs",
+        "dist/error.cjs.map",
+        "dist/error.js",
+        "dist/error.js.map",
+        "dist/error.module.mjs",
+        "dist/error.module.mjs.map",
+        "dist/error.umd.cjs",
+        "dist/error.umd.cjs.map"
     ],
-    "main": "src/index.js",
+    "source": "src/error.js",
+    "module": "dist/error.module.mjs",
+    "unpkg": "dist/error.umd.cjs",
+    "umd:main": "dist/error.umd.cjs",
+    "exports": {
+        "node": {
+            "module": "./src/index.js",
+            "require": "./dist/error.umd.cjs"
+        },
+        "require": "./dist/error.umd.cjs",
+        "default": "./src/index.js"
+    },
     "devDependencies": {
         "@babel/core": "^7.9.0",
         "@babel/eslint-parser": "^7.14.7",
@@ -53,6 +74,7 @@
         "jest-junit": "^13.0.0",
         "jest-sonar-reporter": "^2.0.0",
         "jscpd": "^3.2.1",
+        "microbundle": "^0.15.1",
         "prettier": "^2.5.1"
     },
     "repository": {
@@ -68,6 +90,10 @@
         "catch"
     ],
     "dependencies": {
-        "@hckrnews/validator": "^5.0.1"
+        "@hckrnews/validator": "^8.0.0"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/w3nl"
     }
 }
