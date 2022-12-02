@@ -10,19 +10,6 @@ import RateLimitError from './rate-limit-error.js';
 
 const AppError = makeAppError();
 
-export default Object.freeze({
-    makeAppError,
-    AppError,
-    AuthenticationError,
-    NoContentError,
-    NotFoundError,
-    NotImplementedError,
-    ServerError,
-    TimeoutError,
-    ValidationError,
-    RateLimitError,
-});
-
 export {
     makeAppError,
     AppError,
