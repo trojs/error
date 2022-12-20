@@ -21,10 +21,10 @@ export default (error = Error) =>
          * Set the error values
          *
          * @param {object} error
-         * @param {any} error.value
-         * @param {object} error.type
+         * @param {any?} error.value
+         * @param {object?} error.type
          * @param {string} error.message
-         * @param {object} error.me
+         * @param {object?} error.me
          */
         constructor({ value = null, type = null, message, me = null }) {
             super(message);
