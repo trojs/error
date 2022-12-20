@@ -23,7 +23,7 @@ export default (error = Error) =>
          * @param {object} error
          * @param {any} error.value
          * @param {object} error.type
-         * @param {string} error.nessage
+         * @param {string} error.message
          * @param {object} error.me
          */
         constructor({ value = null, type = null, message, me = null }) {
