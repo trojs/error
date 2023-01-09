@@ -10,7 +10,7 @@ const validator = new Validator(errorSchema);
  * @property {string} message
  * @property {any} value
  * @property {number} status
- * @property {Function|AsyncFunction} type
+ * @property {Function|Promise} type
  * @property {Date} date
  * @property {object} me
  */
@@ -21,10 +21,10 @@ export default (error = Error) =>
          * Set the error values
          *
          * @param {object} error
-         * @param {any?} error.value
-         * @param {object?} error.type
+         * @param {any=} error.value
+         * @param {object=} error.type
          * @param {string} error.message
-         * @param {object?} error.me
+         * @param {object=} error.me
          */
         constructor({ value = null, type = null, message, me = null }) {
             super(message);
