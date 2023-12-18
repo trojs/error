@@ -14,8 +14,7 @@
         "test": "jest",
         "test:watch": "jest src --watch",
         "cpd": "node_modules/jscpd/bin/jscpd src",
-        "vulnerabilities": "npm audit --only=prod",
-        "build": "microbundle --target node src/index.js"
+        "vulnerabilities": "npm audit --only=prod"
     },
     "type": "module",
     "main": "src/index.js",
