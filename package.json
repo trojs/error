@@ -1,7 +1,7 @@
 {
     "name": "@hckrnews/error",
     "description": "Extended Errors",
-    "version": "1.0.9",
+    "version": "2.0.0",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://hckr.news/"
@@ -18,7 +18,7 @@
         "build": "microbundle --target node src/index.js"
     },
     "type": "module",
-    "main": "dist/error.umd.cjs",
+    "main": "src/index.js",
     "files": [
         "src/index.js",
         "src/app-error.js",
@@ -30,29 +30,10 @@
         "src/timeout-error.js",
         "src/validation-error.js",
         "src/rate-limit-error.js",
-        "src/schemas/error.js",
-        "dist/error.cjs",
-        "dist/error.cjs.map",
-        "dist/error.js",
-        "dist/error.js.map",
-        "dist/error.module.mjs",
-        "dist/error.module.mjs.map",
-        "dist/error.umd.cjs",
-        "dist/error.umd.cjs.map"
+        "src/schemas/error.js"
     ],
     "source": "src/index.js",
-    "module": "dist/error.module.mjs",
-    "unpkg": "dist/error.umd.cjs",
-    "umd:main": "dist/error.umd.cjs",
-    "exports": {
-        "node": {
-            "default": "./dist/error.umd.cjs",
-            "module": "./src/index.js",
-            "require": "./dist/error.umd.cjs"
-        },
-        "require": "./dist/error.umd.cjs",
-        "default": "./dist/error.umd.cjs"
-    },
+    "module": "src/index.js",
     "devDependencies": {
         "@babel/core": "^7.9.0",
         "@babel/eslint-parser": "^7.14.7",
@@ -73,7 +54,6 @@
         "jest-junit": "^16.0.0",
         "jest-sonar-reporter": "^2.0.0",
         "jscpd": "^3.2.1",
-        "microbundle": "^0.15.1",
         "prettier": "^3.0.0"
     },
     "repository": {
@@ -89,7 +69,7 @@
         "catch"
     ],
     "dependencies": {
-        "@hckrnews/validator": "^8.0.4"
+        "@hckrnews/validator": "^9.0.0"
     },
     "funding": {
         "type": "github",
