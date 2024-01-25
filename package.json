@@ -68,7 +68,7 @@
         "catch"
     ],
     "dependencies": {
-        "@hckrnews/validator": "^9.0.0"
+        "@hckrnews/validator": "^9.0.1"
     },
     "funding": {
         "type": "github",
