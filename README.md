@@ -1,6 +1,6 @@
-# @hckrnews/error
+# @trojs/error
 
-[![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Scrutinizer Code Quality][scrutinizer-image]][scrutinizer-url]
+[![NPM version][npm-image]][npm-url]
 
 With this package you can throw a custom error with more details.
 The object extends an Error object.
@@ -51,14 +51,14 @@ In the catch method, you can use these fields:
 
 Install the package:
 
-`npm install @hckrnews/error`
+`npm install @trojs/error`
 or
-`yarn add @hckrnews/error`
+`yarn add @trojs/error`
 
 Example usage:
 
 ```javascript
-import { NotFoundError } from '@hckrnews/error'
+import { NotFoundError } from '@trojs/error'
 
 class Test {
     /**
@@ -88,11 +88,5 @@ class Test {
 
 ```
 
-[npm-url]: https://www.npmjs.com/package/@hckrnews/error
-[npm-image]: https://img.shields.io/npm/v/@hckrnews/error.svg
-[build-url]: https://scrutinizer-ci.com/g/hckrnews/error/build-status/main
-[build-image]: https://scrutinizer-ci.com/g/hckrnews/error/badges/build.png?b=main
-[coveralls-url]: https://coveralls.io/r/hckrnews/error
-[coveralls-image]: https://img.shields.io/coveralls/hckrnews/error/master.svg
-[scrutinizer-url]: https://scrutinizer-ci.com/g/hckrnews/error/?branch=main
-[scrutinizer-image]: https://scrutinizer-ci.com/g/hckrnews/error/badges/quality-score.png?b=main
+[npm-url]: https://www.npmjs.com/package/@trojs/error
+[npm-image]: https://img.shields.io/npm/v/@trojs/error.svg
