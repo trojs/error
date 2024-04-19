@@ -1,10 +1,10 @@
 {
-    "name": "@hckrnews/error",
+    "name": "@trojs/error",
     "description": "Extended Errors",
-    "version": "2.0.3",
+    "version": "3.0.0",
     "author": {
         "name": "Pieter Wigboldus",
-        "url": "https://hckr.news/"
+        "url": "https://trojs.org/"
     },
     "license": "MIT",
     "scripts": {
@@ -68,7 +68,7 @@
         "catch"
     ],
     "dependencies": {
-        "@hckrnews/validator": "^9.0.0"
+        "@trojs/validator": "^10.0.0"
     },
     "funding": {
         "type": "github",

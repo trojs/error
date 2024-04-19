@@ -1,5 +1,5 @@
 /** global: validator */
-import { Validator } from '@hckrnews/validator';
+import { Validator } from '@trojs/validator';
 import errorSchema from './schemas/error.js';
 
 const validator = new Validator(errorSchema);
