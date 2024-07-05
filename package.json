@@ -1,7 +1,7 @@
 {
     "name": "@trojs/error",
     "description": "Extended Errors",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://trojs.org/"
@@ -60,7 +60,7 @@
         "url": "https://github.com/trojs/error"
     },
     "engines": {
-        "node": ">= 14"
+        "node": ">= 18"
     },
     "keywords": [
         "error",
