@@ -34,10 +34,10 @@
     "source": "src/index.js",
     "module": "src/index.js",
     "devDependencies": {
-        "@babel/core": "^7.9.0",
+        "@babel/core": "^7.24.7",
         "@babel/eslint-parser": "^7.14.7",
-        "@babel/plugin-transform-modules-commonjs": "^7.14.0",
-        "@babel/preset-env": "^7.9.5",
+        "@babel/plugin-transform-modules-commonjs": "^7.24.7",
+        "@babel/preset-env": "^7.24.7",
         "@hckrnews/eslint-code-quality": "^0.1.5",
         "@hckrnews/eslint-config": "^3.0.0",
         "@jest/globals": "^29.3.1",
