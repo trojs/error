@@ -38,7 +38,7 @@
         "@babel/eslint-parser": "^7.14.7",
         "@babel/plugin-transform-modules-commonjs": "^7.14.0",
         "@babel/preset-env": "^7.9.5",
-        "@hckrnews/eslint-code-quality": "^0.1.5",
+        "@hckrnews/eslint-code-quality": "^0.2.0",
         "@hckrnews/eslint-config": "^3.0.0",
         "@jest/globals": "^29.3.1",
         "babel-jest": "^29.3.1",
