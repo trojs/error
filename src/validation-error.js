@@ -1,25 +1,23 @@
-import makeAppError from './app-error.js';
+import makeAppError from './app-error.js'
 
-const AppError = makeAppError(TypeError);
+const AppError = makeAppError(TypeError)
 
 class ValidationError extends AppError {
     /**
      * Get the error name
-     *
-     * @return {string}
+     * @returns {string}
      */
     get name() {
-        return 'ValidationError';
+        return 'ValidationError'
     }
 
     /**
      * Get the error status
-     *
-     * @return {number}
+     * @returns {number}
      */
     get errorStatus() {
-        return 400;
+        return 400
     }
 }
 
-export default ValidationError;
+export default ValidationError

@@ -4,5 +4,5 @@ export default {
     'value?': 'mixed',
     status: Number,
     'type?': 'function|async',
-    date: Date,
-};
+    date: Date
+}

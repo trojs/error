@@ -1,25 +1,23 @@
-import makeAppError from './app-error.js';
+import makeAppError from './app-error.js'
 
-const AppError = makeAppError(TypeError);
+const AppError = makeAppError(TypeError)
 
 class RateLimitError extends AppError {
     /**
      * Get the error name
-     *
-     * @return {string}
+     * @returns {string}
      */
     get name() {
-        return 'RateLimitError';
+        return 'RateLimitError'
     }
 
     /**
      * Get the error status
-     *
-     * @return {number}
+     * @returns {number}
      */
     get errorStatus() {
-        return 429;
+        return 429
     }
 }
 
-export default RateLimitError;
+export default RateLimitError

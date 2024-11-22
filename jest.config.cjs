@@ -2,13 +2,13 @@ module.exports = {
     moduleFileExtensions: ['js', 'jsx', 'json'],
 
     transform: {
-        '^.+\\.js?$': 'babel-jest',
+        '^.+\\.js?$': 'babel-jest'
     },
 
     transformIgnorePatterns: ['node_modules/(?!(@hckrnews|@trojs)/)'],
 
     moduleNameMapper: {
-        '^@/(.*)$': '<rootDir>/src/$1',
+        '^@/(.*)$': '<rootDir>/src/$1'
     },
 
     testMatch: ['**/__tests__/*.js'],
@@ -21,13 +21,13 @@ module.exports = {
     collectCoverageFrom: ['src/**/*.js'],
 
     reporters: [
-      'default',
-      [ 'jest-junit', {
-        outputDirectory: 'test-reports',
-        outputName: 'jest-junit.xml',
-      } ]
+        'default',
+        [ 'jest-junit', {
+            outputDirectory: 'test-reports',
+            outputName: 'jest-junit.xml'
+        } ]
     ],
 
     testResultsProcessor: 'jest-sonar-reporter',
     coveragePathIgnorePatterns: ['__fixtures__']
-};
+}

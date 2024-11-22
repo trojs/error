@@ -1,25 +1,23 @@
-import makeAppError from './app-error.js';
+import makeAppError from './app-error.js'
 
-const AppError = makeAppError(TypeError);
+const AppError = makeAppError(TypeError)
 
 class AuthenticationError extends AppError {
     /**
      * Get the error name
-     *
-     * @return {string}
+     * @returns {string}
      */
     get name() {
-        return 'AuthenticationError';
+        return 'AuthenticationError'
     }
 
     /**
      * Get the error status
-     *
-     * @return {number}
+     * @returns {number}
      */
     get errorStatus() {
-        return 401;
+        return 401
     }
 }
 
-export default AuthenticationError;
+export default AuthenticationError

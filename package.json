@@ -1,16 +1,16 @@
 {
     "name": "@trojs/error",
     "description": "Extended Errors",
-    "version": "3.0.6",
+    "version": "4.0.0",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://trojs.org/"
     },
     "license": "MIT",
     "scripts": {
-        "lint": "eslint src/*.js --config .eslintrc",
-        "lint:report": "eslint src/*.js --config .eslintrc -f json -o report.json",
-        "lint:fix": "eslint src/*.js --config .eslintrc --fix",
+        "lint": "eslint",
+        "lint:report": "eslint src/*.js -f json -o report.json",
+        "lint:fix": "eslint --fix",
         "test": "jest",
         "test:watch": "jest src --watch",
         "cpd": "node_modules/jscpd/bin/jscpd src",
@@ -34,21 +34,24 @@
     "source": "src/index.js",
     "module": "src/index.js",
     "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "@stylistic/eslint-plugin": "^2.11.0",
+        "@stylistic/eslint-plugin-js": "^2.11.0",
         "@babel/core": "^7.9.0",
         "@babel/eslint-parser": "^7.14.7",
         "@babel/plugin-transform-modules-commonjs": "^7.14.0",
         "@babel/preset-env": "^7.9.5",
-        "@hckrnews/eslint-code-quality": "^0.2.0",
-        "@hckrnews/eslint-config": "^3.0.0",
         "@jest/globals": "^29.3.1",
         "babel-jest": "^29.3.1",
-        "eslint": "^8.4.1",
-        "eslint-config-airbnb": "^19.0.2",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-html": "^8.0.0",
-        "eslint-plugin-import": "^2.23.4",
-        "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-prettier": "^5.1.3",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-jsdoc": "^50.5.0",
+        "eslint-plugin-n": "^17.14.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-promise": "^7.1.0",
+        "eslint-plugin-sonarjs": "^2.0.4",
+        "globals": "^15.12.0",
         "jest": "^29.3.1",
         "jest-junit": "^16.0.0",
         "jest-sonar-reporter": "^2.0.0",
@@ -60,7 +63,7 @@
         "url": "https://github.com/trojs/error"
     },
     "engines": {
-        "node": ">= 18"
+        "node": ">= 20"
     },
     "keywords": [
         "error",
@@ -68,10 +71,19 @@
         "catch"
     ],
     "dependencies": {
-        "@trojs/validator": "^10.0.0"
+        "@trojs/validator": "^11.0.0"
     },
     "funding": {
         "type": "github",
         "url": "https://github.com/sponsors/w3nl"
+    },
+    "overrides": {
+        "eslint-plugin-sonarjs": {
+            "eslint": "^9.15.0",
+            "@typescript-eslint/eslint-plugin": "^8.0.0",
+            "@typescript-eslint/utils": "^8.0.0",
+            "eslint-plugin-import": "^2.31.0",
+            "eslint-plugin-react-hooks": "^5.0.0"
+        }
     }
 }

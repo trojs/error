@@ -1,25 +1,23 @@
-import makeAppError from './app-error.js';
+import makeAppError from './app-error.js'
 
-const AppError = makeAppError(RangeError);
+const AppError = makeAppError(RangeError)
 
 class NoContentError extends AppError {
     /**
      * Get the error name
-     *
-     * @return {string}
+     * @returns {string}
      */
     get name() {
-        return 'NoContentError';
+        return 'NoContentError'
     }
 
     /**
      * Get the error status
-     *
-     * @return {number}
+     * @returns {number}
      */
     get errorStatus() {
-        return 204;
+        return 204
     }
 }
 
-export default NoContentError;
+export default NoContentError
