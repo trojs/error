@@ -1,25 +1,23 @@
-import makeAppError from './app-error.js';
+import makeAppError from './app-error.js'
 
-const AppError = makeAppError();
+const AppError = makeAppError()
 
 class TimeoutError extends AppError {
     /**
      * Get the error name
-     *
-     * @return {string}
+     * @returns {string}
      */
     get name() {
-        return 'TimeoutError';
+        return 'TimeoutError'
     }
 
     /**
      * Get the error status
-     *
-     * @return {number}
+     * @returns {number}
      */
     get errorStatus() {
-        return 408;
+        return 408
     }
 }
 
-export default TimeoutError;
+export default TimeoutError

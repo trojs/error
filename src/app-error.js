@@ -1,11 +1,11 @@
 /** global: validator */
-import { Validator } from '@trojs/validator';
-import errorSchema from './schemas/error.js';
+import { Validator } from '@trojs/validator'
+import errorSchema from './schemas/error.js'
 
-const validator = new Validator(errorSchema);
+const validator = new Validator(errorSchema)
 
 /**
- * @typedef {Object} ErrorValues
+ * @typedef {object} ErrorValues
  * @property {string} name
  * @property {string} message
  * @property {any} value
@@ -19,7 +19,6 @@ export default (error = Error) =>
     class AppError extends error {
         /**
          * Set the error values
-         *
          * @param {object} error
          * @param {any=} error.value
          * @param {object=} error.type
@@ -27,76 +26,70 @@ export default (error = Error) =>
          * @param {object=} error.me
          */
         constructor({ value = null, type = null, message, me = null }) {
-            super(message);
+            super(message)
 
             if (Error.captureStackTrace) {
-                Error.captureStackTrace(this, AppError);
+                Error.captureStackTrace(this, AppError)
             }
 
-            this.setValues({ value, type, me });
+            this.setValues({ value, type, me })
         }
 
         /**
          * Get the error name
-         *
-         * @return {string}
+         * @returns {string}
          */
         get name() {
-            return 'AppError';
+            return 'AppError'
         }
 
         /**
          * Get the error status
-         *
-         * @return {number}
+         * @returns {number}
          */
         get errorStatus() {
-            return 500;
+            return 500
         }
 
         /**
          * Get the error status, or 500 if the error is invalid
-         *
-         * @return {number}
+         * @returns {number}
          */
         get status() {
-            return this.hasErrors ? 500 : this.errorStatus;
+            return this.hasErrors ? 500 : this.errorStatus
         }
 
         /**
          * Set the error values
-         *
          * @param {object} data
          * @param {any} data.value
          * @param {object} data.type
          * @param {object} data.me
          */
         setValues({ value, type, me }) {
-            this.value = value;
-            this.type = type;
-            this.me = me;
-            this.date = new Date();
+            this.value = value
+            this.type = type
+            this.me = me
+            this.date = new Date()
 
             if (!this.validate()) {
-                this.type = Error;
-                this.message = 'Invalid error';
-                this.value = { errors: validator.errors, values: this.values };
+                this.type = Error
+                this.message = 'Invalid error'
+                this.value = { errors: validator.errors, values: this.values }
             }
         }
 
         /**
          * Check if the error has errors
-         *
-         * @return {boolean}
+         * @returns {boolean}
          */
         get hasErrors() {
-            return validator.errors.length > 0;
+            return validator.errors.length > 0
         }
 
         /**
          * Get the error values
-         *
-         * @return {ErrorValues}
+         * @returns {ErrorValues}
          */
         get values() {
             return {
@@ -106,16 +99,15 @@ export default (error = Error) =>
                 status: this.errorStatus,
                 type: this.type,
                 date: this.date,
-                me: this.me,
-            };
+                me: this.me
+            }
         }
 
         /**
          * Validate the error values
-         *
-         * @return {boolean}
+         * @returns {boolean}
          */
         validate() {
-            return validator.validate(this.values);
+            return validator.validate(this.values)
         }
-    };
+    }
