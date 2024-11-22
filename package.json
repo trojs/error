@@ -1,7 +1,7 @@
 {
     "name": "@trojs/error",
     "description": "Extended Errors",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://trojs.org/"
@@ -11,8 +11,8 @@
         "lint": "eslint",
         "lint:report": "eslint src/*.js -f json -o report.json",
         "lint:fix": "eslint --fix",
-        "test": "jest",
-        "test:watch": "jest src --watch",
+        "test": "c8 node --test src/__tests__/*.js",
+        "test:watch": "c8 node --test --watch src/__tests__/*.js",
         "cpd": "node_modules/jscpd/bin/jscpd src",
         "vulnerabilities": "npm audit --only=prod"
     },
@@ -37,12 +37,7 @@
         "@eslint/js": "^9.15.0",
         "@stylistic/eslint-plugin": "^2.11.0",
         "@stylistic/eslint-plugin-js": "^2.11.0",
-        "@babel/core": "^7.9.0",
-        "@babel/eslint-parser": "^7.14.7",
-        "@babel/plugin-transform-modules-commonjs": "^7.14.0",
-        "@babel/preset-env": "^7.9.5",
-        "@jest/globals": "^29.3.1",
-        "babel-jest": "^29.3.1",
+        "c8": "^10.1.2",
         "eslint": "^9.15.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-import": "^2.31.0",
@@ -52,9 +47,6 @@
         "eslint-plugin-promise": "^7.1.0",
         "eslint-plugin-sonarjs": "^2.0.4",
         "globals": "^15.12.0",
-        "jest": "^29.3.1",
-        "jest-junit": "^16.0.0",
-        "jest-sonar-reporter": "^2.0.0",
         "jscpd": "^4.0.0",
         "prettier": "^3.2.5"
     },

@@ -1,4 +1,5 @@
-import { expect, describe, it } from '@jest/globals'
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 import { ServerError } from '../index.js'
 
 /* eslint-disable sonarjs/no-duplicate-string */
@@ -11,15 +12,15 @@ describe('Server Error test', () => {
             message: 'Example text'
         })
 
-        expect(error instanceof ServerError).toEqual(true)
-        expect(error instanceof Error).toEqual(true)
-        expect(error.name).toEqual('ServerError')
-        expect(error.message).toEqual('Example text')
-        expect(error.value).toEqual('test')
-        expect(error.status).toEqual(500)
-        expect(error.type).toEqual(String)
-        expect(error.date.constructor).toEqual(Date)
-        expect(error.stack.includes('ServerError: Example text')).toEqual(true)
+        assert.deepEqual(error instanceof ServerError, true)
+        assert.deepEqual(error instanceof Error, true)
+        assert.deepEqual(error.name, 'ServerError')
+        assert.deepEqual(error.message, 'Example text')
+        assert.deepEqual(error.value, 'test')
+        assert.deepEqual(error.status, 500)
+        assert.deepEqual(error.type, String)
+        assert.deepEqual(error.date.constructor, Date)
+        assert.deepEqual(error.stack.includes('ServerError: Example text'), true)
     })
 
     it('It should handle invalid error values', () => {
@@ -29,20 +30,20 @@ describe('Server Error test', () => {
             message: 'Example text'
         })
 
-        expect(error instanceof ServerError).toEqual(true)
-        expect(error instanceof Error).toEqual(true)
-        expect(error.name).toEqual('ServerError')
-        expect(error.message).toEqual('Invalid error')
-        expect(error.value.errors[0][0]).toEqual('type?')
-        expect(error.value.values.message).toEqual('Invalid error')
-        expect(error.value.values.name).toEqual('ServerError')
-        expect(error.value.values.status).toEqual(500)
-        expect(error.value.values.type).toEqual(Error)
-        expect(error.value.values.value).toEqual('test')
-        expect(error.status).toEqual(500)
-        expect(error.type).toEqual(Error)
-        expect(error.date.constructor).toEqual(Date)
-        expect(error.stack.includes('ServerError: Invalid error')).toEqual(
+        assert.deepEqual(error instanceof ServerError, true)
+        assert.deepEqual(error instanceof Error, true)
+        assert.deepEqual(error.name, 'ServerError')
+        assert.deepEqual(error.message, 'Invalid error')
+        assert.deepEqual(error.value.errors[0][0], 'type?')
+        assert.deepEqual(error.value.values.message, 'Invalid error')
+        assert.deepEqual(error.value.values.name, 'ServerError')
+        assert.deepEqual(error.value.values.status, 500)
+        assert.deepEqual(error.value.values.type, Error)
+        assert.deepEqual(error.value.values.value, 'test')
+        assert.deepEqual(error.status, 500)
+        assert.deepEqual(error.type, Error)
+        assert.deepEqual(error.date.constructor, Date)
+        assert.deepEqual(error.stack.includes('ServerError: Invalid error'),
             true
         )
     })
