@@ -631,7 +631,8 @@ export default [
             'sonarjs/label-has-associated-control': 'error',
             'sonarjs/no-self-import': 'error',
             'sonarjs/no-unused-expressions': 'off',
-            'sonarjs/rules-of-hooks': 'error'
+            'sonarjs/rules-of-hooks': 'error',
+            'n/no-unsupported-features/node-builtins': 'off'
         }
     }
 ]

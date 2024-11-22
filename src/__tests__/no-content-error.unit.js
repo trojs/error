@@ -1,4 +1,5 @@
-import { expect, describe, it } from '@jest/globals'
+import { describe, it } from 'node:test'
+import assert from 'node:assert'
 import { NoContentError } from '../index.js'
 
 /* eslint-disable sonarjs/no-duplicate-string */
@@ -12,16 +13,16 @@ describe('No Content Error test', () => {
             message: 'Example text'
         })
 
-        expect(error instanceof NoContentError).toEqual(true)
-        expect(error instanceof RangeError).toEqual(true)
-        expect(error instanceof Error).toEqual(true)
-        expect(error.name).toEqual('NoContentError')
-        expect(error.message).toEqual('Example text')
-        expect(error.value).toEqual('test')
-        expect(error.status).toEqual(204)
-        expect(error.type).toEqual(fetch)
-        expect(error.date.constructor).toEqual(Date)
-        expect(error.stack.includes('NoContentError: Example text')).toEqual(
+        assert.deepEqual(error instanceof NoContentError, true)
+        assert.deepEqual(error instanceof RangeError, true)
+        assert.deepEqual(error instanceof Error, true)
+        assert.deepEqual(error.name, 'NoContentError')
+        assert.deepEqual(error.message, 'Example text')
+        assert.deepEqual(error.value, 'test')
+        assert.deepEqual(error.status, 204)
+        assert.deepEqual(error.type, fetch)
+        assert.deepEqual(error.date.constructor, Date)
+        assert.deepEqual(error.stack.includes('NoContentError: Example text'),
             true
         )
     })
@@ -33,20 +34,20 @@ describe('No Content Error test', () => {
             message: 'Example text'
         })
 
-        expect(error instanceof NoContentError).toEqual(true)
-        expect(error instanceof Error).toEqual(true)
-        expect(error.name).toEqual('NoContentError')
-        expect(error.message).toEqual('Invalid error')
-        expect(error.value.errors[0][0]).toEqual('type?')
-        expect(error.value.values.message).toEqual('Invalid error')
-        expect(error.value.values.name).toEqual('NoContentError')
-        expect(error.value.values.status).toEqual(204)
-        expect(error.value.values.type).toEqual(Error)
-        expect(error.value.values.value).toEqual('test')
-        expect(error.status).toEqual(500)
-        expect(error.type).toEqual(Error)
-        expect(error.date.constructor).toEqual(Date)
-        expect(error.stack.includes('NoContentError: Invalid error')).toEqual(
+        assert.deepEqual(error instanceof NoContentError, true)
+        assert.deepEqual(error instanceof Error, true)
+        assert.deepEqual(error.name, 'NoContentError')
+        assert.deepEqual(error.message, 'Invalid error')
+        assert.deepEqual(error.value.errors[0][0], 'type?')
+        assert.deepEqual(error.value.values.message, 'Invalid error')
+        assert.deepEqual(error.value.values.name, 'NoContentError')
+        assert.deepEqual(error.value.values.status, 204)
+        assert.deepEqual(error.value.values.type, Error)
+        assert.deepEqual(error.value.values.value, 'test')
+        assert.deepEqual(error.status, 500)
+        assert.deepEqual(error.type, Error)
+        assert.deepEqual(error.date.constructor, Date)
+        assert.deepEqual(error.stack.includes('NoContentError: Invalid error'),
             true
         )
     })

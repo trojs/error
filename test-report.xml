@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/home/pieter/projects/error/src/__tests__/timeout-error.unit.js">
+    <testCase name="Timeout Error test It should create a timeout error" duration="39"/>
+    <testCase name="Timeout Error test It should handle invalid error values" duration="5"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/no-content-error.unit.js">
+    <testCase name="No Content Error test It should create a no content error" duration="32"/>
+    <testCase name="No Content Error test It should handle invalid error values" duration="15"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/rate-limit-error.unit.js">
+    <testCase name="Rate limit Error test It should create a rate limit error" duration="41"/>
+    <testCase name="Rate limit Error test It should handle invalid error values" duration="6"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/server-error.unit.js">
+    <testCase name="Server Error test It should create a server error" duration="34"/>
+    <testCase name="Server Error test It should handle invalid error values" duration="8"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/authentication-error.unit.js">
+    <testCase name="Authentication Error test It should create a authentication error" duration="39"/>
+    <testCase name="Authentication Error test It should handle invalid error values" duration="7"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/validation-error.unit.js">
+    <testCase name="Validation Error test It should create a validation error" duration="40"/>
+    <testCase name="Validation Error test It should handle invalid error values" duration="7"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/not-implemented-error.unit.js">
+    <testCase name="Not Implemented Error test It should create a not implemented error" duration="57"/>
+    <testCase name="Not Implemented Error test It should handle invalid error values" duration="9"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/app-error.unit.js">
+    <testCase name="App Error test It should create a app error with minimum fields" duration="47"/>
+    <testCase name="App Error test It should create a app error with null on optional fields" duration="6"/>
+    <testCase name="App Error test It should create a app error with undefined on optional fields" duration="6"/>
+    <testCase name="App Error test It should create a app error" duration="5"/>
+    <testCase name="App Error test It should handle invalid error values" duration="6"/>
+    <testCase name="App Error test It should catch the error from the stack" duration="27"/>
+    <testCase name="App Error test It should catch the error from the sub stack" duration="6"/>
+  </file>
+  <file path="/home/pieter/projects/error/src/__tests__/not-found-error.unit.js">
+    <testCase name="Not Found Error test It should create a not found error" duration="40"/>
+    <testCase name="Not Found Error test It should handle invalid error values" duration="4"/>
+  </file>
+</testExecutions>

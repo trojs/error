@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="23" failures="0" errors="0" time="2.606">
+  <testsuite name="Timeout Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.12" tests="2">
+    <testcase classname="Timeout Error test It should create a timeout error" name="Timeout Error test It should create a timeout error" time="0.039">
+    </testcase>
+    <testcase classname="Timeout Error test It should handle invalid error values" name="Timeout Error test It should handle invalid error values" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="No Content Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.123" tests="2">
+    <testcase classname="No Content Error test It should create a no content error" name="No Content Error test It should create a no content error" time="0.032">
+    </testcase>
+    <testcase classname="No Content Error test It should handle invalid error values" name="No Content Error test It should handle invalid error values" time="0.015">
+    </testcase>
+  </testsuite>
+  <testsuite name="Rate limit Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.073" tests="2">
+    <testcase classname="Rate limit Error test It should create a rate limit error" name="Rate limit Error test It should create a rate limit error" time="0.041">
+    </testcase>
+    <testcase classname="Rate limit Error test It should handle invalid error values" name="Rate limit Error test It should handle invalid error values" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Server Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.078" tests="2">
+    <testcase classname="Server Error test It should create a server error" name="Server Error test It should create a server error" time="0.034">
+    </testcase>
+    <testcase classname="Server Error test It should handle invalid error values" name="Server Error test It should handle invalid error values" time="0.008">
+    </testcase>
+  </testsuite>
+  <testsuite name="Authentication Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.134" tests="2">
+    <testcase classname="Authentication Error test It should create a authentication error" name="Authentication Error test It should create a authentication error" time="0.039">
+    </testcase>
+    <testcase classname="Authentication Error test It should handle invalid error values" name="Authentication Error test It should handle invalid error values" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="Validation Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.133" tests="2">
+    <testcase classname="Validation Error test It should create a validation error" name="Validation Error test It should create a validation error" time="0.04">
+    </testcase>
+    <testcase classname="Validation Error test It should handle invalid error values" name="Validation Error test It should handle invalid error values" time="0.007">
+    </testcase>
+  </testsuite>
+  <testsuite name="Not Implemented Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.138" tests="2">
+    <testcase classname="Not Implemented Error test It should create a not implemented error" name="Not Implemented Error test It should create a not implemented error" time="0.057">
+    </testcase>
+    <testcase classname="Not Implemented Error test It should handle invalid error values" name="Not Implemented Error test It should handle invalid error values" time="0.009">
+    </testcase>
+  </testsuite>
+  <testsuite name="App Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.188" tests="7">
+    <testcase classname="App Error test It should create a app error with minimum fields" name="App Error test It should create a app error with minimum fields" time="0.047">
+    </testcase>
+    <testcase classname="App Error test It should create a app error with null on optional fields" name="App Error test It should create a app error with null on optional fields" time="0.006">
+    </testcase>
+    <testcase classname="App Error test It should create a app error with undefined on optional fields" name="App Error test It should create a app error with undefined on optional fields" time="0.006">
+    </testcase>
+    <testcase classname="App Error test It should create a app error" name="App Error test It should create a app error" time="0.005">
+    </testcase>
+    <testcase classname="App Error test It should handle invalid error values" name="App Error test It should handle invalid error values" time="0.006">
+    </testcase>
+    <testcase classname="App Error test It should catch the error from the stack" name="App Error test It should catch the error from the stack" time="0.027">
+    </testcase>
+    <testcase classname="App Error test It should catch the error from the sub stack" name="App Error test It should catch the error from the sub stack" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Not Found Error test" errors="0" failures="0" skipped="0" timestamp="2024-11-22T14:08:26" time="2.188" tests="2">
+    <testcase classname="Not Found Error test It should create a not found error" name="Not Found Error test It should create a not found error" time="0.04">
+    </testcase>
+    <testcase classname="Not Found Error test It should handle invalid error values" name="Not Found Error test It should handle invalid error values" time="0.004">
+    </testcase>
+  </testsuite>
+</testsuites>
