@@ -1,7 +1,7 @@
 {
     "name": "@trojs/error",
     "description": "Extended Errors",
-    "version": "4.2.0",
+    "version": "4.3.0",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://trojs.org/"
@@ -27,6 +27,7 @@
         "src/not-found-error.js",
         "src/not-implemented-error.js",
         "src/processing-error.js",
+        "src/response-error.js",
         "src/server-error.js",
         "src/timeout-error.js",
         "src/validation-error.js",
