@@ -5,7 +5,7 @@ import { AuthenticationError } from '../index.js'
 /* eslint-disable sonarjs/no-duplicate-string */
 
 describe('Authentication Error test', () => {
-    it('It should create a authentication error', () => {
+    it('It should create an authentication error', () => {
         const error = new AuthenticationError({
             value: 'test',
             type: String,

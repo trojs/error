@@ -5,7 +5,7 @@ import { AccessError } from '../index.js'
 /* eslint-disable sonarjs/no-duplicate-string */
 
 describe('Access Error test', () => {
-    it('It should create a Access error', () => {
+    it('It should create an Access error', () => {
         const error = new AccessError({
             value: 'test',
             type: String,
