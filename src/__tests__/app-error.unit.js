@@ -5,7 +5,7 @@ import { AppError } from '../index.js'
 /* eslint-disable sonarjs/no-duplicate-string */
 
 describe('App Error test', () => {
-    it('It should create a app error with minimum fields', () => {
+    it('It should create an app error with minimum fields', () => {
         const error = new AppError({
             message: 'Example text'
         })
@@ -22,7 +22,7 @@ describe('App Error test', () => {
         assert.deepEqual(error.me, null)
     })
 
-    it('It should create a app error with null on optional fields', () => {
+    it('It should create an app error with null on optional fields', () => {
         const error = new AppError({
             value: null,
             type: null,
@@ -42,7 +42,7 @@ describe('App Error test', () => {
         assert.deepEqual(error.me, null)
     })
 
-    it('It should create a app error with undefined on optional fields', () => {
+    it('It should create an app error with undefined on optional fields', () => {
         const error = new AppError({
             value: undefined,
             type: undefined,
@@ -62,7 +62,7 @@ describe('App Error test', () => {
         assert.deepEqual(error.me, null)
     })
 
-    it('It should create a app error', () => {
+    it('It should create an app error', () => {
         const error = new AppError({
             value: 'test',
             type: String,

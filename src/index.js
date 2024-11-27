@@ -1,5 +1,6 @@
 import makeAppError from './app-error.js'
 import AuthenticationError from './authentication-error.js'
+import AccessError from './access-error.js'
 import NoContentError from './no-content-error.js'
 import NotFoundError from './not-found-error.js'
 import NotImplementedError from './not-implemented-error.js'
@@ -14,6 +15,7 @@ export {
     makeAppError,
     AppError,
     AuthenticationError,
+    AccessError,
     NoContentError,
     NotFoundError,
     NotImplementedError,
