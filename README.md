@@ -7,16 +7,17 @@ The object extends an Error object.
 
 Types:
 
- * AppError
- * AuthenticationError
- * AccessError
- * NoContent
- * NotFoundError
- * NotImplementedError
- * ServerError
- * TimeoutError
- * ValidationError
- * RateLimitError
+ * NoContent (204)
+ * ValidationError (400)
+ * AuthenticationError (401)
+ * AccessError (403)
+ * NotFoundError (404)
+ * NotImplementedError (405)
+ * TimeoutError (408)
+ * ProcessingError (422)
+ * RateLimitError (429)
+ * AppError (500)
+ * ServerError (500)
 
 You can send:
 

@@ -4,6 +4,7 @@ import AccessError from './access-error.js'
 import NoContentError from './no-content-error.js'
 import NotFoundError from './not-found-error.js'
 import NotImplementedError from './not-implemented-error.js'
+import ProcessingError from './processing-error.js'
 import ServerError from './server-error.js'
 import TimeoutError from './timeout-error.js'
 import ValidationError from './validation-error.js'
@@ -19,6 +20,7 @@ export {
     NoContentError,
     NotFoundError,
     NotImplementedError,
+    ProcessingError,
     ServerError,
     TimeoutError,
     ValidationError,
