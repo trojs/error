@@ -18,6 +18,7 @@ Types:
  * RateLimitError (429)
  * AppError (500)
  * ServerError (500)
+ * ResponseError (502)
 
 You can send:
 
