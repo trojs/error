@@ -18,7 +18,7 @@ describe('Response Error test', () => {
         assert.deepEqual(error.name, 'ResponseError')
         assert.deepEqual(error.message, 'Example text')
         assert.deepEqual(error.value, 'test')
-        assert.deepEqual(error.status, 400)
+        assert.deepEqual(error.status, 502)
         assert.deepEqual(error.type, String)
         assert.deepEqual(error.date.constructor, Date)
         assert.deepEqual(error.stack.includes('ResponseError: Example text'),
@@ -40,7 +40,7 @@ describe('Response Error test', () => {
         assert.deepEqual(error.value.errors[0][0], 'type?')
         assert.deepEqual(error.value.values.message, 'Invalid error')
         assert.deepEqual(error.value.values.name, 'ResponseError')
-        assert.deepEqual(error.value.values.status, 400)
+        assert.deepEqual(error.value.values.status, 502)
         assert.deepEqual(error.value.values.type, Error)
         assert.deepEqual(error.value.values.value, 'test')
         assert.deepEqual(error.status, 500)
