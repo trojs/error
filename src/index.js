@@ -14,17 +14,17 @@ import RateLimitError from './rate-limit-error.js'
 const AppError = makeAppError()
 
 export {
-    makeAppError,
-    AppError,
-    AuthenticationError,
-    AccessError,
-    NoContentError,
-    NotFoundError,
-    NotImplementedError,
-    ProcessingError,
-    ResponseError,
-    ServerError,
-    TimeoutError,
-    ValidationError,
-    RateLimitError
+  makeAppError,
+  AppError,
+  AuthenticationError,
+  AccessError,
+  NoContentError,
+  NotFoundError,
+  NotImplementedError,
+  ProcessingError,
+  ResponseError,
+  ServerError,
+  TimeoutError,
+  ValidationError,
+  RateLimitError
 }
