@@ -27,7 +27,8 @@ describe('App Error test', () => {
       value: null,
       type: null,
       message: 'Example text',
-      me: null
+      me: null,
+      options: null
     })
 
     assert.deepEqual(error instanceof AppError, true)
@@ -47,7 +48,8 @@ describe('App Error test', () => {
       value: undefined,
       type: undefined,
       message: 'Example text',
-      me: undefined
+      me: undefined,
+      options: undefined
     })
 
     assert.deepEqual(error instanceof AppError, true)
@@ -67,7 +69,8 @@ describe('App Error test', () => {
       value: 'test',
       type: String,
       message: 'Example text',
-      me: AppError
+      me: AppError,
+      options: { cause: new Error('Root cause') }
     })
 
     assert.deepEqual(error instanceof AppError, true)

@@ -5,6 +5,12 @@ import errorSchema from './schemas/error.js'
 const validator = new Validator(errorSchema)
 
 /**
+ * Options for the native Error constructor (ES2022).
+ * @typedef {object} ErrorOptions
+ * @property {unknown} [cause]
+ */
+
+/**
  * @typedef {object} ErrorValues
  * @property {string} name
  * @property {string} message
@@ -24,9 +30,11 @@ export default (error = Error) =>
      * @param {object=} error.type
      * @param {string} error.message
      * @param {object=} error.me
+     * @param {ErrorOptions=} error.options
      */
-    constructor ({ value = null, type = null, message, me = null }) {
-      super(message)
+    constructor ({ value = null, type = null, message, me = null, options = null }) {
+      const opts = options == null ? undefined : options
+      super(message, opts)
 
       if (Error.captureStackTrace) {
         Error.captureStackTrace(this, AppError)
