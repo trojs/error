@@ -26,6 +26,7 @@ You can send:
  * value (type: mixed)
  * type (String|Array|Object|Number|Boolean|Date|...)
  * me (current method, no validation on the value)
+ * options (ErrorOptions, see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error)
 
 It validate the values by this schema:
 ```javascript
