@@ -33,7 +33,8 @@
         "./src/timeout-error.js",
         "./src/validation-error.js",
         "./src/rate-limit-error.js",
-        "./src/schemas/error.js"
+        "./src/schemas/error.js",
+        "./types/**/*.d.ts"
     ],
     "source": "./src/index.js",
     "module": "./src/index.js",
