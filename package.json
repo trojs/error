@@ -19,6 +19,7 @@
     },
     "type": "module",
     "main": "./src/index.js",
+    "types": "./types/index.d.ts",
     "files": [
         "./src/index.js",
         "./src/app-error.js",
