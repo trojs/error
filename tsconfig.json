@@ -9,8 +9,7 @@
             "ESNext"
         ],
         "rootDirs": [
-            "src",
-            "types"
+            "src"
         ],
         "baseUrl": ".",
         "resolveJsonModule": true,
@@ -22,8 +21,7 @@
         "noEmit": true
     },
     "include": [
-        "src/**/*",
-        "types/**/*"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules",
