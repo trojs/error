@@ -1,3 +1,4 @@
+/* @ts-self-types="../types/index.d.ts" */
 import makeAppError from './app-error.js'
 import AuthenticationError from './authentication-error.js'
 import AccessError from './access-error.js'
