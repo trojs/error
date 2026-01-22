@@ -1,7 +1,7 @@
 {
     "name": "@trojs/error",
     "description": "Extended Errors",
-    "version": "5.0.2",
+    "version": "5.0.3",
     "author": {
         "name": "Pieter Wigboldus",
         "url": "https://trojs.org/"
