@@ -44,7 +44,7 @@
         "@types/node": "^24.9.2",
         "eslint": "^10.0.0",
         "globals": "^17.0.0",
-        "jscpd": "^4.0.5",
+        "jscpd": "^5.0.0",
         "typescript": "^6.0.0"
     },
     "repository": {
